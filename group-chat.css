@@ -1,0 +1,89 @@
+body{
+	background-color:#020246;
+}
+#main-page-heading{
+	color:yellow;
+	font-family: sans-serif;
+	text-align: center;
+	font-size:30px;
+}
+#code-section{
+	margin-left: 2%;
+	width: 90%;
+	padding:10px;
+	/*background-color: #eee;*/
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+}
+#code-nav{
+	width:80%;
+	height:50px;
+	border-radius: 10px;
+	background-color: #444;	
+	margin:10px 0px;
+	margin-left:10%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.function-btn{
+	padding:5px 10px;
+	height: 80%;
+	font-family:sans-serif;
+	font-weight:bold;
+	border-radius:5px;
+	background-color:#111;
+	border: none;
+	color:#fff;
+}
+.function-btn:active,.function-btn:focus{	
+	opacity: 85%;
+	border: none;
+	outline: none;
+}
+
+#code-box{
+	width:100%;
+	background-color: #222;
+	border-radius:20px;
+	height: 400px;
+	text-align: left;
+	display: flex;
+	justify-content: left;
+	padding: 10px;
+	font-size: 15px;
+	font-family: monospace;
+	letter-spacing: -0.5px;
+}
+#code-code{
+	width: 100%;
+	padding: 10px;
+	/*background-color:#888;*/
+	overflow-y: auto;
+	word-wrap: word-wrap;
+	/*box-shadow: inset 0px 0px 10px 30px #000;*/
+	  text-shadow: 0px -8px 5px rgba(0, 0, 0, 0.3);
+	  background-color: transparent;
+	  border:none;
+	color:#999;
+	border-radius:10px;
+	resize:none;
+	animation:typeme 3s ease-in-out infinite;
+}
+
+@keyframes typeme {
+  0% { outline: 1px solid #222; }
+  50% { outline: 1px solid cyan; }
+  100% { outline: 1px solid #222; }
+}
+
+/* Jab user click kare ya type kare (Focus state) */
+#code-code:focus,
+#code-code:active {
+  border: none;
+  animation: none;           /* Animation ko mukammal rokne ke liye */
+  outline: 1px solid cyan;   /* Solid Cyan border */
+}
+
