@@ -87,3 +87,6 @@ body{
   outline: 1px solid cyan;   /* Solid Cyan border */
 }
 
+#reload-btn{
+text-decoration:none;
+}
