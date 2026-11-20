@@ -141,7 +141,7 @@ window.addEventListener("DOMContentLoaded", loadCloudCode);
 // =====================
 
 reload_btn.addEventListener('click',()=>{
-	window.location.href="./group-chat.html";
+	window.location.href="./group-code.html";
 });
 
 
