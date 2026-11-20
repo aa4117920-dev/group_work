@@ -96,7 +96,7 @@ body{
 	border: none;
 	color:#111;
 }
-#reload-btn{,.function-btn:focus{	
+#reload-btn,#reload-btn:focus{	
 	opacity: 85%;
 	border: none;
 	outline: none;
