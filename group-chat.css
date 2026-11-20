@@ -96,7 +96,7 @@ body{
 	border: none;
 	color:#111;
 }
-#preview-btn,#reload-btn:focus{	
+#preview-btn,#preview-btn:focus{	
 	opacity: 85%;
 	border: none;
 	outline: none;
