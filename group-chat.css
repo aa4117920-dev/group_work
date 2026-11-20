@@ -86,7 +86,19 @@ body{
   animation: none;           /* Animation ko mukammal rokne ke liye */
   outline: 1px solid cyan;   /* Solid Cyan border */
 }
-
 #reload-btn{
-text-decoration:none;
+	text-decoration:none;
+	padding:10px 5px;
+	font-family:sans-serif;
+	font-weight:bold;
+	border-radius:5px;
+	background-color:yellow;
+	border: none;
+	color:#111;
 }
+#reload-btn{,.function-btn:focus{	
+	opacity: 85%;
+	border: none;
+	outline: none;
+}
+
