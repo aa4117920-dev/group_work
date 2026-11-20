@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Live Auto-Sync Page</title>
+</head>
+<body>
+
+  <script>
+    const API_URL = "https://script.google.com/macros/s/AKfycbygEwCYqzK4U5-u5UHU9XdYPPI8FWU_ulOAcHGAYEybAUMZnbKTfGWnyIempkMkcOJRYg/exec";
+    
+    let lastHTML = ""; // Pichla code yaad rakhne ke liye taake page bilawajah blink na kare
+
+    async function renderCloudHTML() {
+      try {
+        const response = await fetch(API_URL, {
+          method: "GET",
+          redirect: "follow"
+        });
+
+        const result = await response.json();
+
+        if (result.status === "success") {
+          let cloudData = result.data;
+
+          // 1. Lines ko l1, l2, l3... ki sahi tarteeb mein lagayein
+          let sortedKeys = Object.keys(cloudData).sort((a, b) => {
+            return parseInt(a.replace("l", "")) - parseInt(b.replace("l", ""));
+          });
+
+          // 2. Mukammal HTML code banayein
+          let fullHTML = sortedKeys.map(key => cloudData[key]).join("\n");
+
+          // 3. Sirf tab update karein jab code mein waqai koi nayi tabdeeli aayi ho
+          if (fullHTML !== lastHTML) {
+            lastHTML = fullHTML;
+            document.documentElement.innerHTML = fullHTML;
+          }
+        }
+
+      } catch (error) {
+        console.error("Sync Error:", error);
+      }
+    }
+
+    // 1. Page open hote hi pehli baar chalayein
+    renderCloudHTML();
+
+    // 2. Har 3 second (3000 milliseconds) baad dubara check aur update karein
+    setInterval(renderCloudHTML, 3000);
+  </script>
+
+</body>
+</html>
