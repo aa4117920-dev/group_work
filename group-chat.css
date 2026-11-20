@@ -86,7 +86,7 @@ body{
   animation: none;           /* Animation ko mukammal rokne ke liye */
   outline: 1px solid cyan;   /* Solid Cyan border */
 }
-#reload-btn{
+#preview-btn{
 	text-decoration:none;
 	padding:10px 5px;
 	font-family:sans-serif;
@@ -96,7 +96,7 @@ body{
 	border: none;
 	color:#111;
 }
-#reload-btn,#reload-btn:focus{	
+#preview-btn,#reload-btn:focus{	
 	opacity: 85%;
 	border: none;
 	outline: none;
