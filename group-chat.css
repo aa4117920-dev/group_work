@@ -1,0 +1,256 @@
+body{
+	background-color:#020246;
+}
+#login-page{
+	background-color:#020246;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top:0;
+	right:10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#login-form{
+	background-color: #333;
+	width:250px;
+	height: 300px;
+	display: flex;
+	justify-content:center;
+	flex-direction: column;
+	padding: 20px;
+	border-radius: 10px;
+	gap:30px;
+	position: relative;
+	top:0;	
+	animation:log-me 2s ease-in-out;
+}
+@keyframes log-me{
+	0%{opacity: 0;transform: scale(0.8);}
+}
+@keyframes log-start{
+	0%{opacity: 1;transform: scale(1);}
+	100%{opacity: 0;transform: scale(0.8);}
+}
+	100%{opacity: 1;transform: scale(1);}
+#login-label{
+	color:#fff;
+	font-size: 20px;
+	font-family: sans-serif;
+	text-align: center;
+	position: absolute;
+	top:10px;
+	left:30%;
+}
+#login-password{
+
+	background-color:#111;
+	color:#fff;
+	padding: 10px;
+	border:none;
+	border-radius: 10px;
+	font-size: 18px;
+}
+#login-password:focus{
+	border:none;
+	outline:1px solid #fff;
+	background-color:#111;
+}
+#login-selection{
+	width: 150px;
+	background-color:blue;
+	color:#fff;
+	border:none;
+	padding: 10px;	
+	border-radius: 5px;
+}
+#main-page-heading{
+	color:yellow;
+	font-family: sans-serif;
+	text-align: center;
+	font-size:30px;
+}
+#login-btn{
+	width: 50%;
+	padding: 15px 20px;
+	position: absolute;
+	top:80%;	
+	left: 25%;
+	background-color: #eee;
+	border-radius: 10px;
+	border:none;
+	transition: 0.1s ease-in-out;
+	font-size: 15px;
+}
+#login-btn:focus{
+	background-color: blue;
+	transform: scale(0.9);
+	color:#fff;
+}
+
+
+
+#presentation-section{
+	/*position: fixed;
+	top: 50px;*/
+	background-color: #222;
+	width: 98%;
+	/*height: 200px;*/
+	padding:30px 5px;
+	margin-left: 0.1%;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap:20px;
+	margin-top:150px;
+	animation:ap-prst 1s ease-in-out;
+}
+@keyframes ap-prst{
+0%{opacity: 0;}
+100%{opacity: 1;}
+}
+#presenation-nav{
+	width:90%;
+	border-radius: 10px;
+	height: 50px;
+	margin-top:10px;
+	background-color:#999;
+	display: flex;
+	padding:10px;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.pr-btn{
+background-color: yellow;
+color: #222;
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+font-weight: bold;
+font-size: 15px;
+trnasition:0.3s ease-in-out;
+}
+.pr-btn:focus{
+	transform: scale(0.9);
+	opacity: 80%;
+}
+#presentation-hero{
+	background-color: #777;
+	width: 95%;
+	/*height: 100px;*/
+	border-radius: 10px;
+	padding:30px 5px;
+}
+#presenation-block{
+	width: 95%;
+	padding: 5px;
+	height: 150px;
+	background-color:#222;
+	color:#fff;
+	margin-left:1%;
+}
+#present-button-section{
+	display: flex;
+	justify-content: space-evenly;
+}
+#presentation-hero button{
+	height:40px;
+}
+
+
+
+
+
+
+
+#code-section{
+	margin-left: 2%;
+	width: 90%;
+	padding:10px;
+	/*background-color: #eee;*/
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+}
+#code-nav{
+	width:80%;
+	height:50px;
+	border-radius: 10px;
+	background-color: #444;	
+	margin:10px 0px;
+	margin-left:10%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-size:15px;
+}
+.function-btn{
+	padding:5px 10px;
+	height: 80%;
+	font-family:sans-serif;
+	font-weight:bold;
+	border-radius:5px;
+	background-color:#111;
+	border: none;
+	color:#fff;
+}
+.function-btn:active,.function-btn:focus{	
+	opacity: 85%;
+	border: none;
+	outline: none;
+}
+
+#code-box{
+	width:100%;
+	background-color: #222;
+	border-radius:20px;
+	height: 400px;
+	text-align: left;
+	display: flex;
+	justify-content: left;
+	padding: 10px;
+	font-size: 15px;
+	font-family: monospace;
+	letter-spacing: -0.5px;
+}
+#code-code{
+	width: 100%;
+	padding: 10px;
+	/*background-color:#888;*/
+	overflow-y: auto;
+	word-wrap: word-wrap;
+	  background-color: transparent;
+	  border:none;
+	color:#74ee74;
+	border-radius:10px;
+	resize:none;
+	animation:typeme 3s ease-in-out infinite;
+}
+
+@keyframes typeme {
+  0% { outline: 1px solid #222; }
+  50% { outline: 1px solid cyan; }
+  100% { outline: 1px solid #222; }
+}
+
+/* Jab user click kare ya type kare (Focus state) */
+#code-code:focus,
+#code-code:active {
+  border: none;
+  animation: none;           /* Animation ko mukammal rokne ke liye */
+  outline: 1px solid cyan;   /* Solid Cyan border */
+}
+
+#preview-btn{
+	text-decoration:none;
+	background-color: yellow;
+	color:#111;
+	padding:7px;
+	border-radius: 5px;
+	font-family: sans-serif;
+
+}
